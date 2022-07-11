@@ -3,7 +3,7 @@ import Form from './componentes/Form'
 import Informative from './componentes/Informative'
 import './css/App.css'
 import { Helmet } from 'react-helmet'
-//FALTA HACER LAS VALIDACIONES SOLAMENTE!
+
 const App = () => {
   return (
   <div>
