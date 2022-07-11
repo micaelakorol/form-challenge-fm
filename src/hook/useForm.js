@@ -9,15 +9,13 @@ const [errors,setErrors] = useState({})
 //const [response,setResponse] = useState(null)
 
 const handleChange = (e) => {
-    //DESTRUCTURACION DE name y value:
-
     const {name,value} = e.target;
     setForm({  
-        ...form, //copia el valor actual del form +
-        [name]: value //actualiza el valor del form.
+        ...form, 
+        [name]: value 
     })
 }
-//validaciones: Al perder el foco de la pagina, actualizar estado + capta si tiene algun error
+
 const handleBlur = (e) => {
 handleChange(e);
 setErrors(validateForm(form)) //capta el error.
@@ -28,11 +26,10 @@ const handleSubmit = (e) => {
     setErrors(validateForm(form))
 setForm(initialForm)
 if(errors){
-    return swal("Muchas gracias por contactarnos", "Revisa tu correo", "success");
+    return swal("very Good", "Check out your email!", "success");
 }
 }
 
 return {
     form,errors,handleBlur,handleChange,handleSubmit
-}
-}
+}}
